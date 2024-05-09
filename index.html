@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./CSS/styles.css">
+    <title>CALCULATOR</title>
+</head>
+<body>
+  <h1>scientific calculator</h1>
+  <form>
+    <input type="text" id="display" readonly>
+    <table>
+      <tr>
+        <td><button onclick="addNumber(7)">7</button></td>
+        <td><button onclick="addNumber(8)">8</button></td>
+        <td><button onclick="addNumber(9)">9</button></td>
+        <td><button onclick="addOpperator('/')">/</button></td>
+      </tr>
+      <tr>
+        <td><button onclick="addNumber(4)">4</button></td>
+        <td><button onclick="addNumber(5)">5</button></td>
+        <td><button onclick="addNumber(6)">6</button></td>
+        <td><button onclick="addOpperator('*')">*</button></td>
+      </tr>
+      <tr>
+        <td><button onclick="addNumber(1)">1</button></td>
+        <td><button onclick="addNumber(2)">2</button></td>
+        <td><button onclick="addNumber(3)">3</button></td>
+        <td><button onclick="addOpperator('-')">-</button></td>
+      </tr>
+      <tr>
+        <td><button onclick="addNumber(0)">0</button></td>
+        <td><button onclick="addDecimal()">.</button></td>
+        <td><button onclick="addOpperator('+')">+</button></td>
+        <td><button onclick="calculate()">=</button></td>
+        </tr>
+        <div id="clear" >
+        <td colspan="4">
+        <button onclick="clearDisplay()">Clear</button>
+        </td></div>
+    </table>
+  </form>
+</body>
+</html>
