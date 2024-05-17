@@ -3,6 +3,7 @@ body{
     color: black;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   justify-content: center;
+  
 
 }
 table{
@@ -12,19 +13,23 @@ table{
    
 }
 button{
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     margin: 5px;
     background-color: rgb(157, 109, 201);
     border: 1px solid purple;
     border-radius: 5px;
     cursor: pointer;
 }
+#clears{
+    width:250px
+}
+
 button:hover{
     background-color: rgb(2, 14, 71);
 }
 #display{
-    width: 12%;
+    width: 15%;
     height: 60px;
     margin: 2px;
     padding: 10px;
@@ -33,5 +38,14 @@ button:hover{
     border-radius: 5px;
     text-align: right;
     font-size: 24px;
+    flex-wrap: nowrap;
 
+}
+@media screen and (max-width:300px) {
+    #display{
+        width: 82%;
+    }
+    #clears{
+        width:95% ;
+    }
 }
