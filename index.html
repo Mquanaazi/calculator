@@ -10,36 +10,36 @@
 <body>
   <div class="container">
     <h1>scientific calculator</h1>
-    <form>
+    <form id="calculator-form">
       <input type="text" id="display" readonly>
       <table>
         <tr>
-          <td><button>7</button></td>
-          <td><button>8</button></td>
-          <td><button>9</button></td>
-          <td><button id="devides">/</button></td>
+          <td><button data-type="operand" value="7" class="btn btn-grey">7</button></td>
+          <td><button data-type="operand" value="8" class="btn btn-grey">8</button></td>
+          <td><button data-type="operand" value="9" class="btn btn-grey">9</button></td>
+          <td><button data-type="operator" id="devides" value="/" class="btn btn-blue">/</button></td>
         </tr>
         <tr>        
-          <td><button>4</button></td>
-          <td><button>5</button></td>
-          <td><button>6</button></td>
-          <td><button id="multiplies">*</button></td>
+          <td><button data-type="operand" value="4" class="btn btn-grey">4</button></td>
+          <td><button data-type="operand" value="5" class="btn btn-grey">5</button></td>
+          <td><button data-type="operand" value="6" class="btn btn-grey">6</button></td>
+          <td><button data-type="operator" id="multiplies" value="*" class="btn btn-blue">*</button></td>
         </tr>      
         <tr>       
-           <td><button>1</button></td>
-          <td><button>2</button></td>
-          <td><button>3</button></td>
-          <td><button id="minuses">-</button></td>
+           <td><button data-type="operand" value="1" class="btn btn-grey">1</button></td>
+          <td><button data-type="operand" value="2" class="btn btn-grey">2</button></td>
+          <td><button data-type="operand" value="3" class="btn btn-grey">3</button></td>
+          <td><button data-type="operator" id="minuses" value="-" class="btn btn-blue">-</button></td>
         </tr>      
         <tr>        
-          <td><button>0</button></td>
-          <td><button id="comma">.</button></td>
-          <td><button id="addition" >+</button></td>
-          <td><button id="equals" >=</button></td>
+          <td><button data-type="operand" value="0" class="btn btn-grey">0</button></td>
+          <td><button data-type="operand" value="." class="btn btn-grey">.</button></td>
+          <td><button data-type="operator" id="addition" class="btn btn-blue">+</button></td>
+          <td><button data-type="operator" value="=" id="equals" class="btn btn-blue">=</button></td>
         </tr>        
         <div id="clear" >
         <td colspan="4">
-        <button id="clears">Clear</button>
+        <button data-type="clear" type="reset" value="clear" id="clears" class="btn btn-blue">Clear</button>
         </td></div>
       </table>
     </form>

@@ -15,20 +15,58 @@ let button3=document.querySelectorAll('button')[10]
 let buttonm=document.querySelector('#multiplies')
 
 let button0=document.querySelectorAll('button')[12]
-let buttond=document.querySelector('#comma')
+let buttond=document.querySelector('button')
 let buttonp=document.querySelector('#addition')
-let buttone=document.querySelectorAll('#equals')
+let buttone=document.querySelector('#equals')
 let buttonc=document.querySelector('#clears')
 let buttons=document.querySelectorAll('button')
 let input=document.querySelector('#display')
 
-function add(value1,valu2) {
-  input.value=value1+valu2
-  return
-}
-buttonp=addEventListener('CLICK'(add))
-for (const button of buttons) {
-  function add() {
-    input.value=add
-  }
-}
+const form = document.getElementById("calculator-form");
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+});
+
+const operand_btns = document.querySelectorAll("button[data-type=operand]");
+const operand = document.querySelectorAll("button");
+let is_operator = false;
+// control what happens when a button is clicked
+operand_btns.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    if (input.value == "0") {
+    input.value = e.target.value;
+    } else if (is_operator) {
+      is_operator = false;
+      input.value = e.target.value;
+    } else if (input.value.includes(".")) {
+      input.value = input.value + "" + e.target.value.replace(".", "");
+    } else {
+      input.value = input.value + "" + e.target.value;
+    }
+  });
+});
+ buttona.addEventListener("click",(division)=>{
+   input.value = input.value + "/";
+  
+ }) 
+
+ buttonmm.addEventListener("click",(subtraction)=>{
+  input.value = input.value + "-";
+ 
+}) 
+
+buttonm.addEventListener("click",(multiplication)=>{
+  input.value = input.value + "*";
+ 
+}) 
+
+buttonp.addEventListener("click",(addition)=>{
+  input.value = input.value + "+";
+ 
+}) 
+buttone.addEventListener("click",(equalto)=>{
+  input.value = eval(input.value )
+  // return
+ 
+}) 
